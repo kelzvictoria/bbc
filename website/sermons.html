@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Title -->
+    <title>Bethel Bible Church | Home</title>
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area" id="Header">
+      <!-- Navbar Area -->
+      
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb-area bg-img" style="background-image: url(img/bg-img/bg-6.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 col-md-6">
+                    <div class="breadcumb-text">
+                        <h5>Live from church</h5>
+                        <h2>Sermons</h2>
+                        <p>May You be Blessed as You listen</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <!-- ##### Sermons Area Start ##### -->
+    <section class="sermons-area section-padding-100-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center mx-auto">
+                        <img src="img/core-img/cross.png" alt="">
+                        <h3>The Sermons</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row" id="sermons-container"></div>
+                <div class="pagenumbers" id="pagination"></div>
+
+                <!--<div class="all-events-btn">
+                    <a href="sermons.html" class="btn faith-btn active">Open Sermons playlist</a>
+                  </div>
+                -->
+            </div>
+        </div>
+    </section>
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area" id="Footer"></footer>
+    <!-- ##### Footer Area Start ##### -->
+    
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src = "sermons.js" ></script>
+    <script src = "sermon.js" ></script>
+    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/plugins/audioplayer.js"></script>
+    
+    <script src="js/active.js"></script>
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+    <script>
+        
+        document.addEventListener('play', function(e){
+        var audios = document.getElementsByTagName('audio');
+        for(var i = 0, len = audios.length; i < len;i++){
+            if(audios[i] != e.target){
+                audios[i].pause();  
+                audios[i].className += 'paused'; 
+            }
+        }
+    }, true);
+  
+    </script>
+  
+    
+</body>
+
+</html>
